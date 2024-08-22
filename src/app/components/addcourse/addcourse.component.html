@@ -1,0 +1,82 @@
+<!-- src/app/components/course/addcourse.component.html -->
+<!-- <app-header></app-header> -->
+
+<div class="container register">
+  <div class="row">
+    <div class="col-md-9 register-right">
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <h3 class="register-heading"><i class="fa fa-sticky-note-o"></i> New Course</h3>
+          <small class="text-danger"><b>{{msg}}</b></small>
+          <form #courseform="ngForm" (ngSubmit)="addCourse()">
+            <div class="row register-form">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Course Title : <b style="color:red;">*</b></label>
+                  <input type="text" class="form-control" placeholder="enter course title" name="courseTitle" [(ngModel)]="course.title" required
+                         #courseTitle="ngModel"
+                         [class.is-invalid]="courseTitle.invalid && courseTitle.touched">
+                  <small class="text-danger" [class.d-none]="courseTitle.valid || courseTitle.untouched"><b>required field</b></small>
+                </div>
+                <!-- <div class="form-group">
+                  <label>Course Description : <b style="color:red;">*</b></label>
+                  <textarea type="text" rows="4" class="form-control" placeholder="enter course description" name="courseDescription" [(ngModel)]="course.courseDescription" required
+                            #courseDescription="ngModel"
+                            [class.is-invalid]="courseDescription.invalid && courseDescription.touched"></textarea>
+                  <small class="text-danger" [class.d-none]="courseDescription.valid || courseDescription.untouched"><b>required field</b></small>
+                </div> -->
+                <div class="form-group">
+                  <label>Course Duration : <b style="color:red;">*</b></label>
+                  <input type="text" class="form-control" placeholder="enter course duration" name="courseDuration" [(ngModel)]="course.courseDuration" required
+                         #courseDuration="ngModel"
+                         [class.is-invalid]="courseDuration.invalid && courseDuration.touched">
+                  <small class="text-danger" [class.d-none]="courseDuration.valid || courseDuration.untouched"><b>required field</b></small>
+                </div>
+                <!-- <div class="form-group">
+                  <label>Course Resource : <b style="color:red;">*</b></label>
+                  <input type="text" class="form-control" placeholder="enter course resource" name="courseResource" [(ngModel)]="course.courseResource" required
+                         #courseResource="ngModel"
+                         [class.is-invalid]="courseResource.invalid && courseResource.touched">
+                  <small class="text-danger" [class.d-none]="courseResource.valid || courseResource.untouched"><b>required field</b></small>
+                </div> -->
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Course Category : <b style="color:red;">*</b></label>
+                  <select class="form-control" name="courseCategory" [(ngModel)]="course.courseCategory" required
+                          #courseCategory="ngModel"
+                          [class.is-invalid]="courseCategory.invalid && courseCategory.touched">
+                    <option value="">Select category...</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Machine Learning">Machine Learning</option>
+                    <option value="Artificial Intelligence">Artificial Intelligence</option>
+                    <option value="Mobile Development">Mobile Development</option>
+                    <option value="Database Management">Database Management</option>
+                    <option value="Networking">Networking</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="Software Engineering">Software Engineering</option>
+                  </select>
+                  <small class="text-danger" [class.d-none]="courseCategory.valid || courseCategory.untouched"><b>required field</b></small>
+                </div>
+
+                <div class="form-group">
+                  <label>Created By : <b style="color:red;">*</b></label>
+                  <input type="number" class="form-control" placeholder="enter created by" name="createdBy" [(ngModel)]="course.createdBy" required
+                         #createdBy="ngModel"
+                         [class.is-invalid]="createdBy.invalid && createdBy.touched">
+                  <small class="text-danger" [class.d-none]="createdBy.valid || createdBy.untouched"><b>required field</b></small>
+                </div>
+              </div>
+            </div>
+            <button [disabled]="courseform.form.invalid" type="submit" class="btnRegister"><i class="fa fa-plus"></i> Add Course</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <app-footer></app-footer> -->
+

@@ -1,0 +1,17 @@
+<!-- <app-header></app-header> -->
+
+<div class="container">
+  <h2 class="heading-text">Mentor List</h2>
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let mentor of mentors">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title">{{ mentor.employeeName }}</h3>
+          <p class="card-text">{{ mentor.email }}</p>
+          <p><strong>Role:</strong> {{ mentor.role }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

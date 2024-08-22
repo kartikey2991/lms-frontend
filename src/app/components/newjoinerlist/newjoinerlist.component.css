@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Merienda+One&family=Staatliches&display=swap');
+
+.row {
+  margin-left: 10%;
+  margin-top: 3%;
+}
+
+#bloodCards {
+  margin-right: 5%;
+  margin-bottom: 4%;
+  width: 40%;
+  border-radius: 15px;
+  padding: 0px;
+  transition: transform .2s;
+  box-shadow: 5px 5px 25px 8px rgb(147, 158, 147);
+}
+
+#bloodCards:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.card-block {
+  margin-top: -33%;
+  margin-left: 40%;
+  margin-bottom: 6%;
+}
+
+.text {
+  font-family: serif;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+#searchtxt {
+  width: 20%;
+  float: right;
+}
+
+.img-block {
+  width: 40%;
+  height: 180px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.circle {
+  background-color: rgb(22, 121, 72);
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+  margin-top: 20%;
+  margin-bottom: auto;
+  border-radius: 50%;
+  width: 73%;
+  height: 80%;
+}
+
+.bloodimg {
+  margin-left: 13%;
+  margin-top: 8%;
+}
+
+.heading-text {
+  font-weight: bolder;
+  font-size: 40px;
+  margin-top: 1%;
+  color: darkgreen;
+  font-family: 'Aladin', cursive;
+  letter-spacing: 1px;
+  margin-left: 45%;
+}
+
+
+/* Container for the row of cards */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the cards */
+  padding: 20px;
+  width: 100%;
+  margin: 0;
+}
+
+/* Individual card styling */
+.card {
+  width: 100%; /* Full width of the container */
+  max-width: none; /* Disable the max-width */
+  border: 1px solid #ccc; /* Light border around the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white; /* Ensure card background is white */
+  margin-bottom: 20px; /* Add margin between cards vertically */
+}
+
+/* Hover effect on the card */
+.card:hover {
+  transform: translateY(-5px); /* Lift the card slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Card body padding */
+.card-body {
+  padding: 15px;
+}
+
+/* Highlighting the employee name */
+.card-title {
+  font-size: 20px; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  color: #136163; /* Custom color for highlight */
+  margin-bottom: 10px; /* Space below the title */
+  text-align: left; /* Align the title to the left */
+}
+
+/* Card text styling */
+.card-text {
+  font-size: 16px;
+  color: #333; /* Darker text color for contrast */
+  margin-bottom: 5px;
+  text-align: left; /* Align the text to the left */
+}
+
+/* Role text styling */
+.card-text strong {
+  font-weight: bold;
+  color: #136163; /* Match the title color for consistency */
+}

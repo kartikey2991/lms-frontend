@@ -1,0 +1,48 @@
+<!-- <app-header></app-header> -->
+
+<div class="container">
+  <h2 class="heading-text">All Queries</h2>
+
+  <div class="row">
+    <div class="card-body" *ngFor="let query of queryDetails">
+      <h3 class="card-title">Query ID: {{ query.queryId }}</h3>
+      <p class="card-text">Query Text: {{ query.description }}</p>
+      <p class="card-text">Response: {{ query.response }}</p>
+      <p class="card-text">New Joiner ID: {{ query.joinerId }}</p>
+      <p class="card-text">Mentor ID: {{ query.mentorId }}</p>
+    </div>
+  </div>
+</div>
+
+<!--<app-header></app-header>-->
+
+<!--<div class="container">-->
+<!--  <h2 class="heading-text">All Queries</h2>-->
+
+<!--  &lt;!&ndash; Calculate resolved and unresolved counts inline &ndash;&gt;-->
+<!--  <div class="resolved-unresolved-count">-->
+<!--    Resolved Queries: {{ queries.filter(query => query.status).length }} |-->
+<!--    Unresolved Queries: {{ queries.filter(query => !query.status).length }}-->
+<!--  </div>-->
+
+<!--  <div class="row">-->
+<!--    <div class="col-md-4" *ngFor="let query of queries">-->
+<!--      <div class="card mb-4 shadow-sm" [ngClass]="{'resolved': query.status, 'unresolved': !query.status}">-->
+<!--        <div class="card-body">-->
+<!--          <h3 class="card-title">Query ID: {{ query.queryId }}</h3>-->
+<!--          <p class="card-text">Query Text: {{ query.queryText }}</p>-->
+<!--          &lt;!&ndash; Display response text only if query is resolved &ndash;&gt;-->
+<!--          <p class="card-text" *ngIf="query.status">Response: {{ query.responseText }}</p>-->
+<!--          <p class="card-text">New Joiner ID: {{ query.newJoinerId }}</p>-->
+<!--          <p class="card-text">Mentor ID: {{ query.mentorId }}</p>-->
+<!--          <p class="card-text">-->
+<!--            Status:-->
+<!--            <span [ngClass]="{'text-success': query.status, 'text-danger': !query.status}">-->
+<!--              {{ query.status ? 'Resolved' : 'Unresolved' }}-->
+<!--            </span>-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->

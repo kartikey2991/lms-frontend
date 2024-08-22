@@ -1,0 +1,23 @@
+<!-- src/app/components/deletecourse/deletecourse.component.html -->
+<!-- <app-header></app-header> -->
+<div class="container">
+  <h3 class="heading-text">Delete Course</h3>
+  <select [(ngModel)]="selectedCourseId" (ngModelChange)="onCourseChange($event)">
+    <option [ngValue]="null">Select a course...</option>
+    <option *ngFor="let course of courses" [ngValue]="course.courseId">
+      {{ course.courseId }} - {{ course.courseTitle }}
+    </option>
+  </select>
+
+  <div *ngIf="selectedCourse" id="courseCard" class="card" style="width: 40rem; margin-top: 20px;">
+    <div class="card-body">
+      <h5 class="card-title">{{ selectedCourse.courseTitle }}</h5>
+      <p class="card-text"><b>Duration:</b> {{ selectedCourse.courseDuration }}</p>
+      <p class="card-text"><b>Category:</b> {{ selectedCourse.courseCategory }}</p>
+      <p class="card-text"><b>Created By:</b> {{ selectedCourse.createdBy }}</p>
+      <button (click)="deleteCourse()" class="btn btn-danger">Delete Course</button>
+    </div>
+  </div>
+
+  <div *ngIf="message">{{ message }}</div>
+</div>

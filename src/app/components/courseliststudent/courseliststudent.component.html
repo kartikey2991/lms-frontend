@@ -1,0 +1,22 @@
+<!-- <app-header></app-header> -->
+
+<div class="container">
+  <h2 class="heading-text">All Courses</h2>
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let course of courses">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title">{{ course.courseTitle }}</h3>
+          <p><strong>Duration:</strong> {{ course.courseDuration }}</p>
+          <p><strong>Category:</strong> {{ course.courseCategory }}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <!-- <button type="button" class="btn btn-sm btn-outline-secondary" (click)="enroll(course)">Enroll Now</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
